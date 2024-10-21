@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__footer {
+  width: 104px;
+  height: 16px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.page__section {
+  max-width: 1280px;
+  margin: 0 auto;
+}

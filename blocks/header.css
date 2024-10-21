@@ -1,0 +1,17 @@
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
+}
+
+.page__section {
+  width: 1440px;
+  margin: 0 auto;
+}
