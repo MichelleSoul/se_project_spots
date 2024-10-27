@@ -4,14 +4,10 @@ header {
   display: flex;
   justify-content: center;
   max-width: 1440px;
+  margin: auto;
 }
 
 .header__logo {
   width: 94px;
   height: 26px;
-}
-
-.page__section {
-  width: 1440px;
-  margin: 0 auto;
 }
