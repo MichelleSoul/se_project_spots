@@ -33,4 +33,8 @@ heart logo
 </svg>
 ]
 
-Good luck and have fun!
+Deployment link to project
+https://michellesoul.github.io/se_project_spots/
+
+video
+https://drive.google.com/file/d/1I41WbhzsB7-7GskxzZdc1-trc6jnrHG9/view?usp=drive_link
