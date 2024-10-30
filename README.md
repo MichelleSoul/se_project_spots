@@ -34,7 +34,7 @@ heart logo
 ]
 
 Deployment link to project
-<a href="https://michellesoul.github.io/se_project_spots/">Project</a>
+https://michellesoul.github.io/se_project_spots/
 
 video
-<a href ="https://drive.google.com/file/d/1I41WbhzsB7-7GskxzZdc1-trc6jnrHG9/view?usp=drive_link">Video</a>
+https://drive.google.com/file/d/1I41WbhzsB7-7GskxzZdc1-trc6jnrHG9/view?usp=sharing
