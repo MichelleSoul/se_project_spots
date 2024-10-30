@@ -1,9 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
 .card__image {
   height: 413px;
   width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__content {
@@ -11,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .card__like-button {
   background-image: url(../images/heart.svg);
   width: 23px;
@@ -30,6 +37,9 @@
   overflow: hidden;
   max-width: 353px;
   margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 627px) {
@@ -40,6 +50,6 @@
   .card__title {
     font-size: 16px;
     line-height: 16px;
-    max-width: 95px;
+    max-width: 235px;
   }
 }
