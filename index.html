@@ -111,7 +111,7 @@
       <footer class="footer page__section">
         <p class="footer__text">2024 &copy; Spots</p>
       </footer>
-      <div class="modal modal__opened">
+      <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="submit" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit Profile</h2>
@@ -123,6 +123,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                autocomplete="name"
               />
             </label>
             <label for="description" class="modal__label">
@@ -132,6 +133,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself "
+                autocomplete="name"
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
