@@ -13,7 +13,7 @@
   visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -28,11 +28,19 @@
 
 .modal__close-btn {
   background-image: url(../images/Close\ Icon.png);
+  background-repeat: no-repeat;
+  background-color: none;
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
+  color: rgba(33, 33, 33, 1);
+  cursor: pointer;
+}
+
+.modal__close-btn :hover {
+  opacity: 1;
 }
 
 .modal__title {
@@ -69,6 +77,11 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: rgba(33, 33, 33, 0.3);
+}
+
+.modal__input:hover {
+  color: rgba(33, 33, 33, 0.3);
 }
 
 .modal__submit-btn {
@@ -81,6 +94,9 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: rgba(252, 245, 229, 1);
+  background-color: rgba(33, 33, 33, 1);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {

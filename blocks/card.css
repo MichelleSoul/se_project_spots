@@ -20,14 +20,21 @@
 
 .card__like-button {
   background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
+  background-color: none;
   width: 23px;
   height: 20px;
   border: none;
   opacity: 40%;
   cursor: pointer;
+  color: rgba(33, 33, 33, 1);
 }
 
 .card__like-button:hover {
+  width: 23px;
+  height: 20px;
+  gap: 0px;
+  border: 2px 0px 0px 0px;
   opacity: 1;
 }
 
@@ -44,12 +51,15 @@
 
 @media screen and (max-width: 627px) {
   .card__image {
+    width: 288px;
     height: 288px;
+    margin:0 0 20px;
+    gap: 20px;
   }
 
   .card__title {
     font-size: 16px;
     line-height: 16px;
     max-width: 235px;
-  }
+
 }
