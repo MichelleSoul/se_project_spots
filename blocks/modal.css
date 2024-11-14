@@ -1,7 +1,7 @@
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   bottom: 0;
   right: 0;
   border-color: rgba(0, 0, 0, 0.5);
@@ -11,10 +11,27 @@
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
+  z-index: 11;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .modal_opened {
   visibility: visible;
+}
+
+.modal-overlay.open {
+  display: block;
 }
 
 .modal__container {
@@ -29,7 +46,7 @@
 .modal__close-btn {
   background-image: url(../images/Close\ Icon.png);
   background-repeat: no-repeat;
-  background-color: none;
+  background-color: transparent;
   position: absolute;
   top: 32px;
   right: 50px;
