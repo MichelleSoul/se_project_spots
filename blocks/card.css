@@ -53,7 +53,7 @@
   .card__image {
     width: 288px;
     height: 288px;
-    margin:0 0 20px;
+    margin: 0 0 20px;
     gap: 20px;
   }
 
@@ -61,5 +61,5 @@
     font-size: 16px;
     line-height: 16px;
     max-width: 235px;
-
+  }
 }

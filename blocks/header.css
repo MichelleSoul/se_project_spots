@@ -14,8 +14,8 @@
 
 @media screen and (max-width: 627px) {
   .header {
-    width: Fixed (320px) px;
-    height: Hug (46px) px;
+    width: 320px;
+    height: 46px;
     padding: 10px 80px 10px 80px;
     gap: 0px;
     border: 0px 0px 1px 0px;

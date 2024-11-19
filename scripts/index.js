@@ -81,17 +81,3 @@ for (let i = 0; i < initialCards.length; i++) {
   const cardElement = getCardElement(initialCards[i]);
   cardsList.prepend(cardElement);
 }
-
-const modalOverlay = document.querySelector(".modal-overlay");
-
-function openModal() {
-  modalOverlay.classList.add("open");
-}
-
-function closeModal() {
-  modalOverlay.classList.remove("open");
-}
-
-document
-  .querySelector(".edit-profile-button")
-  .addEventListener("click", openModal);
