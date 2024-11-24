@@ -4,12 +4,12 @@
 }
 
 .card__image {
-  height: 445px;
+  height: 413px;
   width: 413px;
   object-fit: cover;
   display: block;
   border-radius: 8px;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .card__content {
@@ -61,5 +61,13 @@
     font-size: 16px;
     line-height: 16px;
     max-width: 235px;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 288px;
+    gap: 0px;
+    opacity: 0px;
+    margin: 0;
   }
 }

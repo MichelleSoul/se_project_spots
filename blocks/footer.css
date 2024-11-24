@@ -12,20 +12,18 @@
   line-height: 16px;
   margin: 0 auto;
 }
+
 @media screen and (max-width: 627px) {
+  .footer {
+    width: 104px;
+    height: 16px;
+  }
+}
+
+.footer__text {
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
+  height: 16px;
   text-align: left;
-
-  width: 104px;
-height: 16px;
-top: 2448px;
-left: 108px;
-gap: 0px;
-opacity: 0px;
-
-  }
-
 }
