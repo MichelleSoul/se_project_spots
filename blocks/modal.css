@@ -43,10 +43,14 @@
   color: rgba(33, 33, 33, 1);
   cursor: pointer;
   border: none;
+  opacity: 40%;
 }
 
 .modal__close-btn:hover {
   opacity: 1;
+  width: 40px;
+  height: 40px;
+  gap: 0px;
 }
 
 .modal__title {
@@ -62,7 +66,8 @@
 
 .modal__label {
   display: flex;
-  height: 52px;
+  width: 629px;
+  height: 78px;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
@@ -84,10 +89,16 @@
   text-align: left;
   color: rgba(33, 33, 33, 0.3);
   border-radius: 8px;
+  cursor: pointer;
 }
 
-.modal__input {
-  color: rgba(33, 33, 33, 0.3);
+.modal__input:hover {
+  width: 630px;
+  height: 78px;
+  top: 116px;
+  left: 20px;
+  gap: 8px;
+  opacity: 0px;
 }
 
 .modal__submit-btn {
@@ -97,10 +108,8 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-
   border-radius: 8px;
   height: 52px;
-
   color: rgba(252, 245, 229, 1);
   background-color: rgba(33, 33, 33, 1);
   cursor: pointer;
@@ -116,7 +125,7 @@
     height: 336px;
     padding: 12px;
     gap: 24px;
-    border-radius: 8px 0px 0px 0px;
+    radius: 8px;
     opacity: 0px;
     background-color: rgba(255, 255, 255, 1);
   }
@@ -136,6 +145,7 @@
   }
 
   .modal__input {
+    cursor: pointer;
     font-size: 16px;
   }
 
@@ -152,7 +162,7 @@
     height: 52px;
     padding: 18px 32px 18px 32px;
     gap: 8px;
-    border-radius: 8px 0px 0px 0px;
+    radius: 8px;
     opacity: 0px;
   }
 }
