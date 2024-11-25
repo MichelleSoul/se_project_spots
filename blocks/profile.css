@@ -58,30 +58,17 @@
   display: flex;
   cursor: pointer;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  line-height: 16px;
   font-weight: 500;
   font-size: 16px;
   color: rgba(33, 33, 33, 1);
-  opacity: 0.7;
   width: 107.34px;
   height: 16px;
-  border-radius: 90px 0px 0px 0px;
+  opacity: 50%;
 }
 
 .profile__edit-button:hover {
   color: rgba(33, 33, 33, 1);
   opacity: 1;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: left;
-  width: 107.34px;
-  height: 16px;
-  top: 56px;
-  left: 20px;
-  gap: 8px;
-  border-radius: 90px 0px 0px 0px;
 }
 
 .profile__add-button {
@@ -93,6 +80,7 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   cursor: pointer;
+  width: 157px;
   width: fit-content;
   font-size: 16px;
   line-height: 16px;
@@ -102,11 +90,6 @@
 
 .profile__add-button:hover {
   background-color: rgba(33, 33, 33, 0.8);
-  width: 157px;
-  height: 52px;
-  padding: 18px 32px 18px 32px;
-  gap: 8px;
-  radius: 8px;
   opacity: 0.7px;
 }
 
