@@ -14,7 +14,7 @@
   .page__section {
     padding: 0px 0px 20px 0px;
     gap: 32px;
-    opacity: 0px;
+    opacity: 1;
     max-width: 100%;
   }
 }
