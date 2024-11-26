@@ -105,6 +105,7 @@
     padding: 20px 0px 20px 0px;
     gap: 12px;
     margin: 0;
+    max-width: 288px;
   }
 
   .profile__avatar {
