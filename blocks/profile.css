@@ -15,14 +15,14 @@
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-  min-width: 320px;
+  max-width: 320px;
   width: 100%;
   gap: 0px;
   justify-content: space-between;
 }
 
 .profile__name {
-  width: 420px;
+  max-width: 420px;
   height: 32px;
   gap: 12px;
   margin: 0 0 12px;
@@ -96,6 +96,11 @@
   background: rgba(252, 245, 229, 1);
 }
 
+.profile__plus-icon {
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -103,13 +108,13 @@
     height: 274px;
     padding: 20px 0px 20px 0px;
     gap: 12px;
-    margin: 0;
     max-width: 288px;
   }
 
   .profile__avatar {
     height: 104.35px;
     width: 80px;
+    margin-right: 0;
   }
 
   .profile__name {

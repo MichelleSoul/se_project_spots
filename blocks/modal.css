@@ -67,7 +67,6 @@
 .modal__label {
   display: flex;
   width: 629px;
-  height: 78px;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
@@ -85,16 +84,16 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  /* line-height: 20px; */
   text-align: left;
-  color: rgba(33, 33, 33, 0.4);
   border-radius: 8px;
   cursor: pointer;
+  border: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .modal__input:hover {
-  color: rgba(33, 33, 33, 1);
+  /* color: rgba(33, 33, 33, 1); */
   opacity: 0px;
+  border: 1px solid rgba(33, 33, 33, 1);
 }
 
 .modal__submit-btn {
