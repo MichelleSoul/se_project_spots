@@ -17,7 +17,6 @@
   margin-right: 20px;
   min-width: 320px;
   width: 100%;
-  height: 190px;
   gap: 0px;
   justify-content: space-between;
 }
@@ -80,7 +79,7 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   cursor: pointer;
-  width: 157px;
+  min-width: 157px;
   width: fit-content;
   font-size: 16px;
   line-height: 16px;
