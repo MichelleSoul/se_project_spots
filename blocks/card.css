@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card__image {
@@ -19,23 +20,44 @@
 }
 
 .card__like-button {
-  background-image: url(../images/heart.svg);
+  background-image: url("../images/like-icon-dark.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   width: 23px;
   height: 20px;
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
   color: rgba(33, 33, 33, 1);
 }
 
 .card__like-button:hover {
-  width: 23px;
-  height: 20px;
-  gap: 0px;
-  border: 2px 0px 0px 0px;
-  opacity: 0.7;
+  opacity: 1;
+}
+
+.card__like-button_liked {
+  background-image: url("../images/like-icon-liked.svg");
+  opacity: 1;
+}
+
+.card__like-button_liked:hover {
+  background-image: url("../images/like-icon-liked-hover.svg");
+}
+
+.card__delete-button {
+  background-image: url("../images/delete-icon-default.svg");
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+}
+
+.card__delete-button:hover {
+  background-image: url("../images/delete-icon-hover.svg");
 }
 
 .card__title {
