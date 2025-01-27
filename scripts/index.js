@@ -1,6 +1,6 @@
 const initialCards = [
   {
-    name: "Horizonal Cards",
+    name: "Golden Gate Bridge",
     link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
@@ -39,7 +39,7 @@ const editFormElement = editModal.querySelector(".modal__form");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 
 const cardModal = document.querySelector("#add-card-modal");
@@ -76,6 +76,7 @@ function getCardElement(data) {
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
+    previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
   });
 
@@ -87,11 +88,11 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
-  modal.classList.add("modal__opened");
+  modal.classList.add("modal_opened");
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal__opened");
+  modal.classList.remove("modal_opened");
 }
 
 function handleEditFormSubmit(evt) {
@@ -109,6 +110,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(editModal);
+  evt.target.reset();
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -124,6 +126,13 @@ editModalCloseBtn.addEventListener("click", () => {
 const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
 previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
+});
+
+const closeButtons = document.querySelectorAll(".modal__close");
+
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closePopup(popup));
 });
 
 cardModalBtn.addEventListener("click", () => {

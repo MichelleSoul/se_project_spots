@@ -11,6 +11,7 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .card__content {
@@ -33,15 +34,18 @@
 
 .card__like-button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .card__like-button_liked {
   background-image: url("../images/like-icon-liked.svg");
   opacity: 1;
+  cursor: pointer;
 }
 
 .card__like-button_liked:hover {
   background-image: url("../images/like-icon-liked-hover.svg");
+  cursor: pointer;
 }
 
 .card__delete-button {
@@ -54,10 +58,12 @@
   height: 32px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .card__delete-button:hover {
   background-image: url("../images/delete-icon-hover.svg");
+  cursor: pointer;
 }
 
 .card__title {
@@ -77,6 +83,7 @@
     height: 288px;
     margin: 0 0 20px;
     gap: 20px;
+    cursor: pointer;
   }
 
   .card__title {
