@@ -1,8 +1,8 @@
 .modal {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -24,7 +24,6 @@
 .modal__container {
   max-width: 730px;
   width: 100%;
-  height: 415px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
@@ -48,17 +47,17 @@
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 32px;
-  text-align: left;
+  line-height: 24px;
   background: #212121;
   color: white;
+  margin-bottom: 0;
+  margin-top: 8px;
+  padding: 4px 8px;
   border-radius: 8px;
-  top: 750px;
-  right: 200px;
 }
 
 .modal__image {
-  width:100%;
+  width: 100%;
   max-width: 80vw;
   max-height: 80vh;
   border-radius: 8px;
@@ -73,10 +72,13 @@
   background-repeat: no-repeat;
   background-color: transparent;
   position: absolute;
-  top: 32px;
-  right:-30px;
-  width: 40px;
-  height: 40px;
+  background-position: center;
+  object-fit: contain;
+  padding: 0;
+  top: 31px;
+  right: 49px;
+  width: 22.63px;
+  height: 22.63px;
   color: rgba(33, 33, 33, 1);
   cursor: pointer;
   border: none;
@@ -87,7 +89,8 @@
   background-image: url("../images/close-light.svg");
   opacity: 1;
   cursor: pointer;
-  left: calc(100% + 30px);
+  left: calc(100% + 7px);
+  top: 0;
 }
 
 .modal__close-btn:hover {
@@ -111,7 +114,6 @@
 
 .modal__label {
   display: flex;
-  width: 629px;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
@@ -160,19 +162,7 @@
     padding: 0 10px;
   }
 
-  .modal__container {
-    width: 300px;
-    height: 336px;
-    padding: 12px;
-    gap: 24px;
-    radius: 8px;
-    opacity: 1;
-    gap: 24px
-    background-color: rgba(255, 255, 255, 1);
-  }
-
   .modal__title {
-    width: 93px;
     height: 20px;
     gap: 0px;
     font-size: 20px;
@@ -186,6 +176,12 @@
     cursor: pointer;
   }
 
+  .modal__close-btn_type_preview {
+    top: -36px;
+    right: 4px;
+    left: auto;
+  }
+
   .modal__input {
     cursor: pointer;
     font-size: 16px;
@@ -193,14 +189,12 @@
 
   .modal__label {
     margin-bottom: 24px;
-    width: 276px;
     height: 74px;
   }
 
   .modal__submit-btn {
     width: 100%;
     text-align: center;
-    width: 276px;
     height: 52px;
     padding: 18px 32px 18px 32px;
     gap: 8px;
@@ -209,9 +203,19 @@
     cursor: pointer;
   }
 
-  .modal__image{
+  .modal__image {
     width: 100%;
     border-radius: 4px;
   }
 
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .modal__image {
+    max-width: 288px;
+  }
 }

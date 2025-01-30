@@ -1,6 +1,6 @@
 const initialCards = [
   {
-    name: "Golden Gate Bridge",
+    name: "Golden Gate",
     link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
@@ -109,7 +109,7 @@ function handleAddCardSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  closeModal(editModal);
+  closeModal(cardModal);
   evt.target.reset();
 }
 
