@@ -157,13 +157,16 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 745px) {
   .modal {
-    padding: 134px, 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+@media screen and (max-width: 627px) {
+
   .modal__container {
-    padding: 12px;
+    padding: 12px 12px 12px 12px;
   }
 
   .modal__title {

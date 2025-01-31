@@ -128,11 +128,11 @@ previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-const closeButtons = document.querySelectorAll(".modal__close");
+const closeButtons = document.querySelectorAll(".modal__close-btn");
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
-  button.addEventListener("click", () => closePopup(popup));
+  button.addEventListener("click", () => closeModal(popup));
 });
 
 cardModalBtn.addEventListener("click", () => {
