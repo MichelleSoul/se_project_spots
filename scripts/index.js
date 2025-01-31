@@ -119,14 +119,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(editModal);
 });
 
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
-
 const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
-previewCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
 
@@ -137,10 +130,6 @@ closeButtons.forEach((button) => {
 
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
-});
-
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
