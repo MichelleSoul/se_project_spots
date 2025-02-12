@@ -35,7 +35,7 @@ const profileName = document.querySelector(".profile__name");
 const descriptionName = document.querySelector(".profile__description ");
 
 const editModal = document.querySelector("#edit-modal");
-const editFormElement = editModal.querySelector(".modal__form");
+const editFormElement = document.forms["modal__form"];
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
@@ -89,9 +89,8 @@ function getCardElement(data) {
 }
 
 function closeOverlay(evt) {
-  const openModal = document.querySelector(".modal_opened");
   if (evt.target.classList.contains("modal")) {
-    closeModal(openModal);
+    closeModal(evt.target);
   }
 }
 
@@ -162,7 +161,11 @@ cardModalBtn.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-initialCards.forEach((item) => {
+function renderCard(item, method = "prepend") {
   const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
+  cardsList[method](cardElement);
+}
+
+initialCards.forEach((card) => {
+  renderCard(card);
 });
