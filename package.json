@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "webpack": "5.76.0"
   },
   "name": "se_project_spots",
   "version": "1.0.0",
