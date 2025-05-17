@@ -71,7 +71,7 @@
 }
 
 .modal__close-btn {
-  background-image: url(../images/Close\ Icon.png);
+  background-image: url("../images/Close Icon.png");
   background-repeat: no-repeat;
   background-color: transparent;
   position: absolute;
@@ -172,7 +172,7 @@
 
 .modal__submit-btn_disabled {
   opacity: 0.5;
-   color:rgba(33, 33, 33, 1)
+   color:rgba(33, 33, 33, 1);
    cursor:not-allowed;
  }
 
@@ -181,6 +181,7 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+}
 
 @media screen and (max-width: 627px) {
 

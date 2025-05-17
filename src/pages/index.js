@@ -1,3 +1,6 @@
+import { enableValidation, settings } from "../scripts/validation";
+import "./index.css";
+
 const initialCards = [
   {
     name: "Golden Gate",
@@ -169,3 +172,5 @@ function renderCard(item, method = "prepend") {
 initialCards.forEach((card) => {
   renderCard(card);
 });
+
+enableValidation(settings);
