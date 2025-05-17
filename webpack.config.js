@@ -21,4 +21,16 @@ module.exports = {
     liveReload: true,
     hot: false,
   },
+
+  // Babel related configuration
+  target: ["web", "es5"],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: "/node_modules/",
+      },
+    ],
+  },
 };
