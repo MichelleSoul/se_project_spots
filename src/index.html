@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Webpack</title>
-</head>
-<body>
-  <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webpack</title>
+  </head>
+  <body class="page">
+    <h1 class="page__title">Hello from Webpack!</h1>
+    <h2 class="page__subtitle">Image and Font Files Processing!</h2>
+    <img id="image-steps" class="page__image">
+    <div class="page__image page__image_achievements"></div>
+    <img class="page__image" src="<%= require('./images/website-contacts.jpg')%>">
+  </body>
 </html>

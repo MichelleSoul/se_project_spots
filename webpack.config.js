@@ -24,8 +24,6 @@ module.exports = {
     liveReload: true,
     hot: false,
   },
-
-  // Babel related configuration
   target: ["web", "es5"],
   module: {
     rules: [
@@ -42,6 +40,10 @@ module.exports = {
             loader: "css-loader",
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
+        type: "asset/resource",
       },
     ],
   },
