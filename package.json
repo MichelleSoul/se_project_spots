@@ -10,7 +10,8 @@
   "description": "This is an image sharing site",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production",
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
