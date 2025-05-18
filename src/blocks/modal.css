@@ -172,7 +172,7 @@
 
 .modal__submit-btn_disabled {
   opacity: 0.5;
-   color:rgba(33, 33, 33, 1);
+   /* color:rgba(33, 33, 33, 1); */
    cursor:not-allowed;
  }
 
