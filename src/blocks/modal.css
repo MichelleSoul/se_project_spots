@@ -176,6 +176,28 @@
    cursor:not-allowed;
  }
 
+#delete-modal h3 {
+  font-size: 24px;
+  justify-self: center;
+}
+
+#delete-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#delete-modal button#btn_delete {
+  background: #FF6565;
+  border: none;
+}
+
+#delete-modal button#btn_cancel {
+  background: #FFF;
+  color: black;
+  border: 1px solid black;
+}
+
 @media screen and (max-width: 745px) {
   .modal {
     padding-left: 10px;
