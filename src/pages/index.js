@@ -46,11 +46,12 @@ function renderCard(item, method = "prepend") {
   cardsList[method](cardElement);
 }
 
-api.getInitialCards().then((cards) => {
+api.getAppInfo()
+  .then(([cards]) => {
     cards.forEach((card) => {
       renderCard(card);
     });
-}).catch(console.error);
+  }).catch(console.error);
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalBtn = document.querySelector(".profile__add-button");

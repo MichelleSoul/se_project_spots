@@ -4,6 +4,10 @@ class Api {
     this._headers = headers;
   }
 
+  getAppInfo() {
+    return Promise.all([this.getInitialCards()])
+  }
+
   getInitialCards() {
    return fetch(`${this._baseUrl}/cards`, {
      headers: this._headers,
@@ -12,6 +16,7 @@ class Api {
        if (res.ok) {
          return res.json();
        }
+       Promise.reject(`Error: ${res.status}`);
      });
  }
 
