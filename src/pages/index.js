@@ -1,6 +1,6 @@
 import { enableValidation, resetValidation, disableButton, settings } from "../scripts/validation";
 import "./index.css";
-import Api from "../scripts/Api.js"
+import Api from "../utils/Api.js"
 
 /* const initialCards = [
   {
@@ -47,11 +47,10 @@ function renderCard(item, method = "prepend") {
 }
 
 api.getInitialCards().then((cards) => {
-    console.log(cards);
     cards.forEach((card) => {
       renderCard(card);
     });
-});
+}).catch(console.error);
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalBtn = document.querySelector(".profile__add-button");
