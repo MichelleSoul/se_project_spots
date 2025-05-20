@@ -1,7 +1,8 @@
 import { enableValidation, resetValidation, disableButton, settings } from "../scripts/validation";
 import "./index.css";
+import Api from "../scripts/Api.js"
 
-const initialCards = [
+/* const initialCards = [
   {
     name: "Golden Gate",
     link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
@@ -30,7 +31,27 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-];
+];*/
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "93873c14-dd20-4a3b-b60d-3b44647a81f6",
+    "Content-Type": "application/json"
+  }
+});
+
+function renderCard(item, method = "prepend") {
+  const cardElement = getCardElement(item);
+  cardsList[method](cardElement);
+}
+
+api.getInitialCards().then((cards) => {
+    console.log(cards);
+    cards.forEach((card) => {
+      renderCard(card);
+    });
+});
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalBtn = document.querySelector(".profile__add-button");
@@ -59,7 +80,7 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  console.log(data);
+  // console.log(data);
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -163,14 +184,5 @@ cardModalBtn.addEventListener("click", () => {
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
-
-function renderCard(item, method = "prepend") {
-  const cardElement = getCardElement(item);
-  cardsList[method](cardElement);
-}
-
-initialCards.forEach((card) => {
-  renderCard(card);
-});
 
 enableValidation(settings);
