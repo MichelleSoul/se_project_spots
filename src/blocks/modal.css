@@ -111,7 +111,7 @@
   line-height: 32px;
   text-align: left;
   height: 32px;
-  width: 169px;
+  /* width: 169px; */
 }
 
 .modal__label {

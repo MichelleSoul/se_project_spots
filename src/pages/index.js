@@ -24,6 +24,8 @@ api.getAppInfo()
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalBtn = document.querySelector(".profile__add-button");
+const avatarProfile = document.querySelector(".profile__avatar")
+const avatarModalBtn = document.querySelector(".profile__avatar-btn");
 const profileName = document.querySelector(".profile__name");
 const descriptionName = document.querySelector(".profile__description ");
 
@@ -41,6 +43,13 @@ const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
+
+const avatarModal = document.querySelector("#avatar-modal");
+const avatarForm = avatarModal.querySelector(".modal__form");
+const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
+const avatarModalCloseBtn = avatarModal.querySelector(".modal__close-btn");
+const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
+
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
@@ -131,6 +140,17 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
+function handleAvatarSubmit(evt) {
+  evt.preventDefault();
+  api.editAvatarInfo(avatarLinkInput.value)
+  .then((data) => {
+    console.log(data);
+    avatarProfile.src = data.avatar;
+    closeModal(avatarModal);
+  })
+  .catch(console.error);
+}
+
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = descriptionName.textContent;
@@ -154,6 +174,11 @@ closeButtons.forEach((button) => {
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
 });
+
+avatarModalBtn.addEventListener("click", () => {
+  openModal(avatarModal);
+});
+avatarForm.addEventListener("submit", handleAvatarSubmit);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
