@@ -183,6 +183,13 @@
   justify-self: center;
 }
 
+#delete-modal .modal__close-btn {
+  background-image: url("../images/close-light.svg");
+  opacity: 1;
+  top: 15px;
+  right: -40px;
+}
+
 #delete-form {
   display: flex;
   justify-content: center;
@@ -195,7 +202,7 @@
   border: none;
 }
 
-#delete-modal button#btn_cancel {
+#delete-modal button#btn_delete_cancel {
   background: #FFF;
   color: black;
   border: 1px solid black;
@@ -259,6 +266,24 @@
   .modal__caption {
     font-size: 16px;
     line-height: 19.2px;
+  }
+
+  #delete-modal h3 {
+    text-align: center;
+  }
+
+  #delete-modal .modal__container {
+    padding: 25px;
+  }
+
+  #delete-modal .modal__close-btn {
+    top: -35px;
+    right: 12px;
+  }
+
+  #delete-form {
+    flex-direction: column;
+    padding: 20px 0;
   }
 }
 

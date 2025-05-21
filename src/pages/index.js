@@ -61,8 +61,9 @@ const avatarModalCloseBtn = avatarModal.querySelector(".modal__close-btn");
 const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
 
 const deleteModal = document.querySelector("#delete-modal");
-const deleteFrom = deleteModal.querySelector(".modal__form");
+const deleteForm = deleteModal.querySelector(".modal__form");
 const deleteBtn = deleteModal.querySelector("#btn_delete");
+const deleteCancelBtn = deleteModal.querySelector("#btn_delete_cancel");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
@@ -79,8 +80,6 @@ function handleDeleteSubmit(evt) {
   api
     .deleteCard(selectedCardId)
     .then(() => {
-      // TODO remove the card from the DOM
-      // close the modal
       selectedCard.remove();
       closeModal(deleteModal)
     })
@@ -98,6 +97,22 @@ function handleDeleteCard(cardElement, cardId) {
   openModal(deleteModal);
 }
 
+function handleLike(evt, id) {
+  const isLiked = evt.target.classList.contains("card__like-button_liked");
+  api.handleLike(id, isLiked)
+    .then((data) => {
+      // console.log(data);
+      evt.target.classList.toggle("card__like-button_liked", data.isLiked);
+    })
+    .catch(console.error);
+
+  // 1. check whether card is currently liked or not
+  //   const isLiked = ???
+  // 2. call the  changeLikeStatus method, passing it the appropriate arguments
+  // 3. handle the response (.then and .catch)
+  // 4. in the .then, toggle active class
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -111,10 +126,9 @@ function getCardElement(data) {
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
+  cardLikeBtn.classList.toggle("card__like-button_liked", data.isLiked);
 
-  cardLikeBtn.addEventListener("click", () => {
-    cardLikeBtn.classList.toggle("card__like-button_liked");
-  });
+  cardLikeBtn.addEventListener("click", (evt) => handleLike(evt, data._id));
 
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
@@ -123,7 +137,7 @@ function getCardElement(data) {
     previewModalCaptionEl.textContent = data.name;
   });
 
-  cardDeleteButton.addEventListener("click", (evt) => {
+  cardDeleteButton.addEventListener("click", () => {
     handleDeleteCard(cardElement, data._id);
   });
 
@@ -247,9 +261,14 @@ cardModalBtn.addEventListener("click", () => {
 avatarModalBtn.addEventListener("click", () => {
   openModal(avatarModal);
 });
+
+deleteCancelBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 
-deleteFrom.addEventListener("submit", handleDeleteSubmit);
+deleteForm.addEventListener("submit", handleDeleteSubmit);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
