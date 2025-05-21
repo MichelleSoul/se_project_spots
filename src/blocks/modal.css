@@ -14,13 +14,15 @@
     204px,
     355px 203px 355px;
   margin: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 
 .modal_opened {
-  visibility: visible;
+  /* visibility: visible; */
+  pointer-events: auto;
   opacity: 1;
 }
 
@@ -189,6 +191,7 @@
 
 #delete-modal button#btn_delete {
   background: #FF6565;
+  color: black;
   border: none;
 }
 

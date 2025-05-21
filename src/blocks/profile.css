@@ -112,6 +112,7 @@
   height: 52px;
   align-self: flex-end;
   border-radius: 8px;
+  border:none;
   padding: 0;
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
