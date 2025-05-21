@@ -2,7 +2,7 @@
 
 This is an image sharing site
 
-##Description
+## Description
 
 Image Sharing site to enjoy with your friends on all different screen sizes!
 
