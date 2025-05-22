@@ -45,7 +45,9 @@ const editFormElement = document.forms["modal__form"];
 const editSubmitBtn = editModal.querySelector(".modal__submit-btn");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
-const editModalDescriptionInput = editModal.querySelector("#profile-description-input");
+const editModalDescriptionInput = editModal.querySelector(
+  "#profile-description-input",
+);
 
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
@@ -81,14 +83,14 @@ function handleDeleteSubmit(evt) {
     .deleteCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
-      closeModal(deleteModal)
+      closeModal(deleteModal);
     })
+    .catch(console.error)
     .finally(() => {
       setTimeout(() => {
         deleteBtn.textContent = "Delete";
-      }, 305)
-    })
-    .catch(console.error);
+      }, 305);
+    });
 }
 
 function handleDeleteCard(cardElement, cardId) {
@@ -99,7 +101,8 @@ function handleDeleteCard(cardElement, cardId) {
 
 function handleLike(evt, id) {
   const isLiked = evt.target.classList.contains("card__like-button_liked");
-  api.handleLike(id, isLiked)
+  api
+    .handleLike(id, isLiked)
     .then((data) => {
       // console.log(data);
       evt.target.classList.toggle("card__like-button_liked", data.isLiked);
@@ -188,7 +191,7 @@ function handleEditFormSubmit(evt) {
       setTimeout(() => {
         editSubmitBtn.textContent = "Save";
         disableButton(editSubmitBtn, settings);
-      }, 305)
+      }, 305);
     })
     .catch(console.error);
 }
@@ -210,7 +213,7 @@ function handleAddCardSubmit(evt) {
       setTimeout(() => {
         cardSubmitBtn.textContent = "Save";
         disableButton(cardSubmitBtn, settings);
-      }, 305)
+      }, 305);
     })
     .catch(console.error);
 }
@@ -229,7 +232,7 @@ function handleAvatarSubmit(evt) {
         avatarSubmitBtn.textContent = "Save";
         disableButton(avatarSubmitBtn, settings);
         avatarLinkInput.value = "";
-      }, 305)
+      }, 305);
     })
     .catch(console.error);
 }
